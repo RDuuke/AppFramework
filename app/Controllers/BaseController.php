@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Controllers\Controller;
 
-class UsersController implements Controller
+class BaseController implements Controller
 {
 
     public function Index()

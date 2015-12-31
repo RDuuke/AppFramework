@@ -31,7 +31,7 @@
 
     function route($route, $title, $id = null, $attributes = null)
     {
-        if($id == null){
+        if(!$id == null){
             $tpl = "<a href='" . BASE_URL . "/" . $route . $id ."'";
         }else{
             $tpl = "<a href='" . BASE_URL . "/" . $route . "'";

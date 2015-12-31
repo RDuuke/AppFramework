@@ -32,7 +32,7 @@ class UsersController implements Controller
      */
     public function edit($id){
         $user = $this->users->find($id);
-        return view('users/edit', 'base', compact('users'));
+        return view('users/edit', 'base', compact('user'));
     }
 
     /**
@@ -42,6 +42,7 @@ class UsersController implements Controller
     public function show($id){
         echo "Show: " . $id;
     }
+
     public function create(){
         return view('users/create', 'base');
     }
