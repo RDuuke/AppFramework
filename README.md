@@ -16,6 +16,6 @@ Se encuentran en la carpeta *resource/view* tanto layout y vistas se llaman a tr
 ####**BD:**
 Actualmente los datos de configuracion de BD se hacen directamente en el archivo *config/Connection.php*, solo hay soporte para **Mysql**.
 ####**Rutas:**
-No hay un sistema definido de rutas, ya que las mismas se crean con el parámetro *www.domio.com/Controller/Metodo/Parametros* entonces las rutas irán ligadas a ese formato.
+No hay un sistema definido de rutas, ya que las mismas se crean con el parámetro *midomio.com/Controller/Metodo/Parametros* entonces las rutas irán ligadas a ese formato.
 ______
 Alguna sugerencia o duda lo pueden hacer en  twitter: [@RDuuke](http://www.twitter.com/rduuke)
