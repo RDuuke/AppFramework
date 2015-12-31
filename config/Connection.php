@@ -9,7 +9,7 @@
 namespace Config;
 
 
-class Connection
+abstract class Connection
 {
     protected $host = 'localhost';
 

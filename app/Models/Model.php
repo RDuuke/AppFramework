@@ -5,7 +5,7 @@ namespace App\Models;
 
 use Config\Connection;
 
-class Model extends Connection
+abstract class Model extends Connection
 {
     protected $table;
     protected $primaryKey = 'id';
