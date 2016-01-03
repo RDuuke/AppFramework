@@ -1,29 +1,29 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: RDuuke
- * Date: 29/12/2015
- * Time: 06:34 PM
- */
 
 namespace Config;
 
 
 abstract class Connection
 {
-    protected $host = 'localhost';
+    /*protected $host = 'localhost';
 
     protected $user = 'root';
 
     protected $db = 'app';
 
-    protected $password = '';
+    protected $password = '';*/
 
     protected $connection;
 
     public function __construct()
     {
-        $this->connection = new \PDO('mysql:host=' .$this->host .';dbname=' .$this->db .';', $this->user, $this->password );
+        global $DB_DATOS;
+        try{
+            $this->connection = new \PDO('mysql:host=' . $DB_DATOS["DB_HOST"] . ';dbname=' . $DB_DATOS["DB_DBNAME"] . ';charset=utf8', $DB_DATOS["DB_USER"], $DB_DATOS["DB_PASSWORD"]);
+        }catch (\PDOException $e) {
+            print "!Error: " . $e->getMessage() . "!<br />";
+            die();
+        }
 
     }
 }

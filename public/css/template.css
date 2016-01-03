@@ -4,3 +4,20 @@
 .padding-top-200{
     padding-top: 200px;
 }
+.news{
+    background-color: #01579b !important;
+}
+.warning{
+    background-color: #ff6f00 !important;
+}
+.success{
+    background-color: #004d40 !important;
+}
+.danger{
+    background-color: #b71c1c !important;
+}
+.chip.warning, .chip.news, .chip.success, .chip.danger{
+    color: #fff !important;
+}
+
+

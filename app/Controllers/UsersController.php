@@ -23,6 +23,7 @@ class UsersController implements Controller
      */
     public function index()
     {
+        newFlashMessage('test', 'teste de mensajes flash');
         $users = $this->users->all();
         return view('users/home', compact('users'));
     }

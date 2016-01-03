@@ -1,6 +1,8 @@
 <h1>Welcome to Usuarios!!!</h1>
 <?php route('users/create', "Crear Usuario"); ?>
-
+<?php if(getFlashMessage('test')): ?>
+    <?php printFlashMessage('test'); ?>
+<?php endif ?>
 <table>
     <thead>
         <tr>

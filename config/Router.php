@@ -7,7 +7,7 @@ class Router
 {
   public static function Run(Request $request){
       $controller = $request->getController() . 'Controller';
-      $route = ROOT . 'app' . DS . 'Controllers' . DS . $controller . '.php';
+      $route = ROOT . '../' . 'app' . DS . 'Controllers' . DS . $controller . '.php';
       $method = $request->getMethod();
 
       if($method == 'index.php'){
