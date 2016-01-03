@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\Controller;
 use App\Models\Users;
 
@@ -23,36 +24,40 @@ class UsersController implements Controller
     public function index()
     {
         $users = $this->users->all();
-        return view('users/home', 'base', compact('users'));
+        return view('users/home', compact('users'));
     }
 
     /**
      * Edit method, receives numeric parameter
      * @param $id int
      */
-    public function edit($id){
+    public function edit($id)
+    {
         $user = $this->users->find($id);
-        return view('users/edit', 'base', compact('user'));
+        return view('users/edit',compact('user'));
     }
 
     /**
      * Show method, receives numeric parameter
      * @param $id
      */
-    public function show($id){
+    public function show($id)
+    {
         echo "Show: " . $id;
     }
 
-    public function create(){
-        return view('users/create', 'base');
+    public function create()
+    {
+        return view('users/create');
     }
 
 
     /**
      * Store method receives POST parameters
      */
-    public function store(){
-        $request = (object) $_POST;
+    public function store()
+    {
+        $request = (object)$_POST;
         $this->users->email = $request->email;
         $this->users->name = $request->name;
         $this->users->create($request->password, $request->rol);
@@ -64,11 +69,12 @@ class UsersController implements Controller
      * and receives POST parameters
      * @param $id
      */
-    public function update($id){
-        $request = (object) $_POST;
+    public function update($id)
+    {
+        $request = (object)$_POST;
         $this->users->email = $request->email;
         $this->users->name = $request->name;
-        if($request->password == ""){
+        if ($request->password == "") {
             $this->users->update($id, $request->rol);
             return redirect('users/');
         }

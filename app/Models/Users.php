@@ -26,7 +26,7 @@ class Users extends Model
         if ($password == "") {
             $prepare = $this->connection->prepare("UPDATE $this->table SET email = :email, name = :name, rol = :rol WHERE id = :id");
 
-        }else{
+        } else {
 
             $prepare = $this->connection->prepare("UPDATE $this->table SET email = :email, name = :name, password = :password, rol = :rol WHERE id = :id");
             $prepare->bindParam(":password", $password, \PDO::PARAM_INT);

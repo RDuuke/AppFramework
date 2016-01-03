@@ -5,7 +5,7 @@
      * @param string layout
      * @param array $parameters
      */
-    function view($template, $layout = 'base', $parameters = array())
+    function view($template,$parameters = array(),$layout = 'base')
     {
         extract($parameters);
         $content = 'resource' . DS . 'views' . DS . $template .'.tpl.php';
@@ -22,11 +22,11 @@
     }
 
     function style($route){
-        echo "<link type='text/css' href='" . BASE_URL . "/" . $route ."'>";
+        echo "<link rel='stylesheet' href='" . BASE_URL . "/public/" . $route ."'>";
     }
 
     function script($route){
-        echo "<script src='" . BASE_URL . "/" . $route ."'></script>";
+        echo "<script src='" . BASE_URL . "/public/" . $route ."'></script>";
     }
 
     function route($route, $title, $id = null, $attributes = null)
