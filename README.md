@@ -5,7 +5,7 @@ Es un mini framework creado en php, basado en el paradigma de MVC, Actualmente s
 Características:
 --------
 ####**Modelos:**
-Actualmente todos los modelos deben extender de la clase abstracta Modelo, esta tiene ya métodos definidos que puede ser usado en cualquier de las otras clases. Actualmente se busca manejar la forma de crear y editar campos.
+Actualmente todos los modelos deben extender de la clase abstracta Modelo, esta tiene ya métodos definidos que puede ser usado en cualquier de los otros controladores. Actualmente se busca manejar la forma de crear y editar campos.
 ####**Controladores:**
 Los controladores todos deben implementar la interfaz Controller, se recomienda que el controllador tenga mismo nombre de clase como el archivo, agregando como sufijo Controller ejem: nombre de clase: (*UsersController*) y nombre archivo (*UsersController.php*).
 
