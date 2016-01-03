@@ -1,6 +1,6 @@
-<h1>Create User</h1>
-
+<h3 class="thin">Create User</h3>
+<?php route('users', 'To get back'); ?>
 <form action="store" method="post">
     <?php include '_partial/_campos.tpl.php'; ?>
-    <button>Guardar</button>
+    <button>Save</button>
 </form>

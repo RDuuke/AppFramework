@@ -1,5 +1,5 @@
-<h1>Welcome to Usuarios!!!</h1>
-<?php route('users/create', "Crear Usuario"); ?>
+<h3 class="thin">Welcome to Users!!!</h3>
+<?php route('users/create', "New User"); ?>
 <?php if(getFlashMessage('test')): ?>
     <?php printFlashMessage('test'); ?>
 <?php endif ?>
@@ -18,8 +18,8 @@
                 <td><?php echo $user->id ?></td>
                 <td><?php echo $user->email ?></td>
                 <td><?php echo $user->name ?></td>
-                <td><?php route('users/edit/','Editar', $user->id, ['class' => 'btn']) ?> -
-                    <?php route('users/destroy/', 'Eliminar', $user->id, ['targe' => "_blank"]) ?>
+                <td><?php route('users/edit/','Edit', $user->id, ['class' => 'btn']) ?> -
+                    <?php route('users/destroy/', 'Delete', $user->id, ['targe' => "_blank"]) ?>
                 </td>
             </tr>
         <?php endforeach ?>
