@@ -41,6 +41,9 @@ abstract class Model extends Connection
         $this->connection->query("DELETE FROM $this->table WHERE id = $id");
     }
 
+    /**
+     * @return mixed
+     */
     public function last()
     {
         $data = $this->connection->query("SELECT * FROM $this->table ORDER BY id DESC LIMIT 1");
@@ -48,12 +51,19 @@ abstract class Model extends Connection
         return $data;
     }
 
+    /**
+     * @return mixed
+     */
     public function first(){
         $data = $this->connection->query("SELECT * FROM $this->table ORDER BY id ASC LIMIT 1");
         $data = $data->fetch(\PDO::FETCH_OBJ);
         return $data;
     }
 
+    /**
+     * @param $sql
+     * @return bool
+     */
     public function where($sql){
         $data = $this->connection->query("SELECT * FROM $this->table WHERE $sql");
         if($data->rowCount() > 1){

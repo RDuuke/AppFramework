@@ -18,20 +18,32 @@ function view($template, $parameters = array(), $layout = 'base')
  */
 function redirect($route)
 {
-    $route = BASE_URL . '/' . $route;
+    $route = BASE_PUBLIC . '/' . $route;
     header('Location: ' . $route);
 }
 
+/**
+ * @param $route
+ */
 function style($route)
 {
     echo "<link rel='stylesheet' href='" . BASE_URL . "/public/" . $route . "'>";
 }
 
+/**
+ * @param $route
+ */
 function script($route)
 {
     echo "<script src='" . BASE_URL . "/public/" . $route . "'></script>";
 }
 
+/**
+ * @param $route
+ * @param $title
+ * @param null $id
+ * @param null $attributes
+ */
 function route($route, $title, $id = null, $attributes = null)
 {
     if (!$id == null) {
@@ -48,11 +60,19 @@ function route($route, $title, $id = null, $attributes = null)
     echo $tpl;
 }
 
+/**
+ * @param $name
+ * @param $message
+ */
 function newFlashMessage($name, $message)
 {
     $_SESSION[$name] = $message;
 }
 
+/**
+ * @param $name
+ * @return bool
+ */
 function getFlashMessage($name)
 {
     if (!isset($_SESSION[$name])) {
@@ -61,6 +81,10 @@ function getFlashMessage($name)
     return true;
 }
 
+/**
+ * @param $name
+ * @param string $type
+ */
 function printFlashMessage($name, $type = 'news')
 {
     $chip = "<div class='chip ". $type. "'>" . $_SESSION[$name] . "<i class='material-icons'>close</i></div>";

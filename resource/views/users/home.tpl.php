@@ -19,7 +19,7 @@
                 <td><?php echo $user->email ?></td>
                 <td><?php echo $user->name ?></td>
                 <td><?php route('users/edit/','Edit', $user->id, ['class' => 'btn']) ?> -
-                    <?php route('users/destroy/', 'Delete', $user->id, ['targe' => "_blank"]) ?>
+                    <?php route('users/destroy/', 'Delete', $user->id, ['target' => "_blank", "class" => "btn red"]) ?>
                 </td>
             </tr>
         <?php endforeach ?>
