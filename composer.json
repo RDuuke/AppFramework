@@ -1,0 +1,13 @@
+{
+    "name": "rduuke/newbie",
+    "description": "Framework app web of php",
+    "license": "MT",
+    "authors": [
+        {
+            "name": "RDuuke",
+            "email": "juuanduuke@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
