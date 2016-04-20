@@ -23,8 +23,8 @@ class UsersController implements Controller
      */
     public function index()
     {
-        newFlashMessage('test', 'test de mensajes flash');
-        $users = $this->users->all();
+        newFlashMessage('test', 'test','warning');
+        $users = Users::all();
         return view('users/home', compact('users'));
     }
 
@@ -34,7 +34,7 @@ class UsersController implements Controller
      */
     public function edit($id)
     {
-        $user = $this->users->find($id);
+        $user = Users::find($id);
         return view('users/edit',compact('user'));
     }
 
@@ -75,11 +75,7 @@ class UsersController implements Controller
         $request = (object)$_POST;
         $this->users->email = $request->email;
         $this->users->name = $request->name;
-        if ($request->password == "") {
-            $this->users->update($id, $request->rol);
-            return redirect('users/');
-        }
-        $this->users->update($id, $request->rol, $request->password);
+        $this->users->update($id, $request);
         return redirect('users/');
 
     }

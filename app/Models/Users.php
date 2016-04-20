@@ -6,7 +6,7 @@ use App\Models\Model;
 
 class Users extends Model
 {
-    protected $table = 'users';
+    protected  $table = 'users';
 
     public $email;
     public $name;
@@ -21,20 +21,23 @@ class Users extends Model
         $prepare->execute();
     }
 
-    public function update($id, $rol, $password = "")
+    public function update($id, $request)
     {
-        if ($password == "") {
+        if ($request->password == "") {
             $prepare = $this->connection->prepare("UPDATE $this->table SET email = :email, name = :name, rol = :rol WHERE id = :id");
 
         } else {
 
-            $prepare = $this->connection->prepare("UPDATE $this->table SET email = :email, name = :name, password = :password, rol = :rol WHERE id = :id");
-            $prepare->bindParam(":password", $password, \PDO::PARAM_INT);
+            $prepare = $this->connection->prepare("UPDATE $this->table SET email = :email, name = :name, password = MD5(:password), rol = :rol WHERE id = :id");
+            $prepare->bindParam(":password", $request->password, \PDO::PARAM_INT);
         }
         $prepare->bindParam(":email", $this->email, \PDO::PARAM_STR);
         $prepare->bindParam(":name", $this->name, \PDO::PARAM_STR);
-        $prepare->bindParam(":rol", $rol, \PDO::PARAM_INT);
+        $prepare->bindParam(":rol", $request->rol, \PDO::PARAM_INT);
         $prepare->bindParam(":id", $id, \PDO::PARAM_INT);
-        $prepare->execute();
+        if(!$prepare->execute()){
+            print_r($prepare->errorInfo());
+            exit();
+        }
     }
 }

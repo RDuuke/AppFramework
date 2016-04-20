@@ -64,11 +64,11 @@ function route($route, $title, $id = null, $attributes = null)
  * @param $name
  * @param $message
  */
-function newFlashMessage($name, $message)
+function newFlashMessage($name, $message, $type = 'news')
 {
     $_SESSION[$name] = $message;
+    $_SESSION["type"]= $type;
 }
-
 /**
  * @param $name
  * @return bool
@@ -85,10 +85,11 @@ function getFlashMessage($name)
  * @param $name
  * @param string $type
  */
-function printFlashMessage($name, $type = 'news')
+function printFlashMessage($name)
 {
-    $chip = "<div class='chip ". $type. "'>" . $_SESSION[$name] . "<i class='material-icons'>close</i></div>";
+    $chip = "<div class='chip " .$_SESSION['type']. "'>" . $_SESSION[$name] . "<i class='material-icons'>close</i></div>";
     echo $chip;
     unset($_SESSION[$name]);
+    unset($_SESSION['type']);
 }
 

@@ -15,8 +15,9 @@ abstract class Model extends Connection
      * All method, returns all the model data
      * @return mixed
      */
-    public function all(){
-        $result = $this->connection->query("SELECT * FROM $this->table");
+    public static function all(){
+        $instance = new static;
+        $result = $instance->connection->query("SELECT * FROM $instance->table");
         $data = $result->fetchAll(\PDO::FETCH_OBJ);
         return $data;
     }
@@ -26,8 +27,9 @@ abstract class Model extends Connection
      * @param $id int
      * @return mixed
      */
-    public function find($id){
-        $data = $this->connection->query("SELECT * FROM $this->table WHERE $this->primaryKey = $id");
+    public static function find($id){
+        $instance = new static;
+        $data = $instance->connection->query("SELECT * FROM $instance->table WHERE $instance->primaryKey = $id");
         $data = $data->fetch(\PDO::FETCH_OBJ);
         return $data;
     }
