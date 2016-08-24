@@ -1,13 +1,18 @@
 {
     "name": "rduuke/newbie",
-    "description": "Framework app web of php",
-    "license": "MT",
+    "description": "Micro-Framework Web of PHP",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "RDuuke",
             "email": "juuanduuke@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload":{
+      "psr-4":{
+        "RDuuke\\Newbie\\": "src/"
+      }
+    }
 }

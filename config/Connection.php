@@ -9,7 +9,7 @@ abstract class Connection
 
     protected $user = 'root';
 
-    protected $db = 'app';
+    protected $db = 'App';
 
     protected $password = '';*/
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace RDuuke\Newbie\App\Models;
 
 
 use Config\Connection;

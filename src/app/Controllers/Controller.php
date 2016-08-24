@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace RDuuke\Newbie\App\Controllers;
 
 
 interface Controller

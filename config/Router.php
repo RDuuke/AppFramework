@@ -7,7 +7,7 @@ class Router
 {
   public static function Run(Request $request){
       $controller = $request->getController() . 'Controller';
-      $route = ROOT . '../' . 'app' . DS . 'Controllers' . DS . $controller . '.php';
+      $route = ROOT . '../' . 'src' . DS . 'App' . DS . 'Controllers' . DS . $controller . '.php';
       $method = $request->getMethod();
 
       if($method == 'index.php'){
@@ -18,7 +18,7 @@ class Router
       if(is_readable($route)){
           require_once $route;
 
-          $function  = "App\\Controllers\\" . $controller;
+          $function  = "RDuuke\\Newbie\\App\\Controllers\\" . $controller;
           $controller = new $function;
 
           if(! isset($parameters)){

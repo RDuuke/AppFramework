@@ -4,7 +4,7 @@ $DB_DATOS = [
     "DB_HOST" => "localhost",
     "DB_USER" => "root",
     "DB_PASSWORD" => "",
-    "DB_DBNAME" => "app"
+    "DB_DBNAME" => "App"
 ];
 
 /* TimeZone*/

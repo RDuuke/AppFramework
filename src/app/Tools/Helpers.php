@@ -9,7 +9,7 @@ function view($template, $parameters = array(), $layout = 'base')
 {
     extract($parameters);
     $content = '../resource' . DS . 'views' . DS . $template . '.tpl.php';
-    include ROOT .'../'.  'resource' . DS . 'views' . DS . 'layout' . DS . $layout . '.tpl.php';
+    include ROOT .'../'. 'resource' . DS . 'views' . DS . 'layout' . DS . $layout . '.tpl.php';
 }
 
 /**

@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Controllers;
-use App\Controllers\Controller;
+namespace RDuuke\Newbie\App\Controllers;
+use RDuuke\Newbie\App\Controllers\Controller;
 
 class BaseController implements Controller
 {

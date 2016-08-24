@@ -10,7 +10,7 @@ Actualmente todos los modelos deben extender de la clase abstracta Modelo, esta 
 Los controladores todos deben implementar la interfaz Controller, se recomienda que el controllador tenga mismo nombre de clase como el archivo, agregando como sufijo Controller ejem: nombre de clase: (*UsersController*) y nombre archivo (*UsersController.php*).
 
 ####**Helpers:**
-Actualmente se cuenta con algunos helpers que los pueden encontrar en el archivo *App/Tools/Helper.php*, los cuales destacan el view, redirect y route.
+Actualmente se cuenta con algunos helpers que los pueden encontrar en el archivo *App/Tools/Helper.php*, los cuales destacan el view, redirect y route. 
 ####**Vistas/Layout:**
 Se encuentran en la carpeta *resource/view* tanto layout y vistas se llaman a través del helper view().
 ####**BD:**
