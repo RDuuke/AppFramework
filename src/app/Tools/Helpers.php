@@ -8,8 +8,10 @@
 function view($template, $parameters = array(), $layout = 'base')
 {
     extract($parameters);
-    $content = '../resource' . DS . 'views' . DS . $template . '.tpl.php';
-    include ROOT .'../'. 'resource' . DS . 'views' . DS . 'layout' . DS . $layout . '.tpl.php';
+    ob_start();
+    require('../resource' . DS . 'views' . DS . $template . '.tpl.php');
+    $content = ob_get_clean();
+    require (ROOT .'../'. 'resource' . DS . 'views' . DS . 'layout' . DS . $layout . '.tpl.php');
 }
 
 /**

@@ -6,7 +6,7 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', realpath(dirname(__FILE__)) . DS);
 require_once '../config/Request.php';
 require_once '../config/Router.php';
-require_once '../config/Config.php';
 require_once '../src/App/Tools/Helpers.php';
 require_once '../vendor/autoload.php';
+require_once '../config/Config.php';
 Config\Router::Run(new Config\Request());

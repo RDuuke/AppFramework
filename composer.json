@@ -9,7 +9,10 @@
             "email": "juuanduuke@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/database": "^5.3",
+        "filp/whoops": "^2.1"
+    },
     "autoload":{
       "psr-4":{
         "RDuuke\\Newbie\\": "src/"

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <?php include $content; ?>
+        <?php echo $content; ?>
     </div>
     <?php script('js/jquery.min.js')?>
     <?php script('js/materialize.min.js')?>

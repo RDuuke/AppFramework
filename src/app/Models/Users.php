@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace RDuuke\Newbie\App\Models;
 
-use App\Models\Model;
-
+use Illuminate\Database\Eloquent\Model;
 class Users extends Model
 {
     protected  $table = 'users';
 
-    public $email;
+    /*public $email;
     public $name;
 
     public function create($password, $rol)
@@ -39,5 +38,5 @@ class Users extends Model
             print_r($prepare->errorInfo());
             exit();
         }
-    }
+    }*/
 }
