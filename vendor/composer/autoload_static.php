@@ -26,6 +26,10 @@ class ComposerStaticInitfba4f64be6538334f082894b84416854
         array (
             'RDuuke\\Newbie\\' => 14,
         ),
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -55,6 +59,10 @@ class ComposerStaticInitfba4f64be6538334f082894b84416854
         'RDuuke\\Newbie\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
         'Illuminate\\Support\\' => 
         array (

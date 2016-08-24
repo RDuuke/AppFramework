@@ -7,6 +7,7 @@ class Users extends Model
 {
     protected  $table = 'users';
 
+    protected $fillable = ['email', 'name', 'password', 'rol'];
     /*public $email;
     public $name;
 

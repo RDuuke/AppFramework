@@ -15,7 +15,6 @@ class UsersController implements Controller
      */
     public function __construct()
     {
-        $this->users = new Users();
     }
 
     /**
@@ -25,7 +24,7 @@ class UsersController implements Controller
     {
         newFlashMessage('test', 'test','warning');
         $users = Users::all();
-        return view('users/home', compact('users'));
+        return view('users\home', compact('users'));
     }
 
     /**
@@ -58,10 +57,13 @@ class UsersController implements Controller
      */
     public function store()
     {
-        $request = (object)$_POST;
-        $this->users->email = $request->email;
-        $this->users->name = $request->name;
-        $this->users->create($request->password, $request->rol);
+        $request = (array)$_POST;
+        Users::create($request);
+        /*$user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = md5($request->password);
+        $user->rol =  $request->rol;
+        $user->save();*/
         return redirect('users/');
     }
 
@@ -73,9 +75,10 @@ class UsersController implements Controller
     public function update($id)
     {
         $request = (object)$_POST;
-        $this->users->email = $request->email;
-        $this->users->name = $request->name;
-        $this->users->update($id, $request);
+        $user = Users::find($id);
+        $user->email = $request->email;
+        $user->name = $request->name;
+        $user->save();
         return redirect('users/');
 
     }
@@ -86,7 +89,8 @@ class UsersController implements Controller
      */
     public function destroy($id)
     {
-        $this->users->destroy($id);
+        $user = Users::find($id);
+        $user->delete();
         return redirect('users/');
     }
 

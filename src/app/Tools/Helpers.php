@@ -2,16 +2,17 @@
 /**
  *function view, renders a view and the layout select
  * @param string $template
- * @param string layout
  * @param array $parameters
  */
-function view($template, $parameters = array(), $layout = 'base')
+function view($template, $parameters = array())
 {
-    extract($parameters);
-    ob_start();
-    require('../resource' . DS . 'views' . DS . $template . '.tpl.php');
-    $content = ob_get_clean();
-    require (ROOT .'../'. 'resource' . DS . 'views' . DS . 'layout' . DS . $layout . '.tpl.php');
+    //extract($parameters);
+    //ob_start();
+    //require('../resource' . DS . 'views' . DS . $template . '.tpl.php');
+    //$content = ob_get_clean();
+    //require (ROOT .'../'. 'resource' . DS . 'views' . DS . 'layout' . DS . $layout . '.tpl.php');
+    $tmpl = new \League\Plates\Engine('..\resource\views', 'tpl.php');
+    echo $tmpl->render($template, $parameters);
 }
 
 /**

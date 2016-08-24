@@ -1,3 +1,4 @@
+<?php $this->layout('layout\base') ?>
 <h3 class="thin">Create User</h3>
 <?php route('users', 'To get back'); ?>
 <form action="store" method="post">

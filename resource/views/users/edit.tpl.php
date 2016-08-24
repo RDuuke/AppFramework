@@ -1,3 +1,4 @@
+<?php $this->layout('layout\base') ?>
 <h3 class="thin">Edit User: <?php echo $user->name; ?></h3>
 <?php route('users', 'To get back'); ?>
 
