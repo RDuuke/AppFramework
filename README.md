@@ -1,4 +1,4 @@
-**AppFramework**
+**Newbie**
 ============
 Es un mini framework creado en php, basado en el paradigma de MVC, Actualmente se encuentra en modo Alfa.
 
