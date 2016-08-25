@@ -1,3 +1,4 @@
+[![StyleCI](https://styleci.io/repos/48806051/shield)](https://styleci.io/repos/48806051)
 **Newbie**
 ============
 Es un mini framework creado en php, basado en el paradigma de MVC, Actualmente se encuentra en modo Alfa.
