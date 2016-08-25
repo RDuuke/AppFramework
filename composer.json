@@ -1,22 +1,25 @@
 {
-    "name": "rduuke/newbie",
-    "description": "Micro-Framework Web of PHP",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "RDuuke",
-            "email": "juuanduuke@gmail.com"
-        }
-    ],
-    "require": {
-        "illuminate/database": "^5.3",
-        "filp/whoops": "^2.1",
-        "league/plates": "^3.1"
-    },
-    "autoload":{
-      "psr-4":{
-        "RDuuke\\Newbie\\": "src/"
-      }
+  "name": "rduuke/newbie",
+  "description": "Micro-Framework Web of PHP",
+  "homepage": "https://github.com/RDuuke/Newbie",
+  "keywords": ["PHP", "framework", "web"],
+  "type": ":project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "RDuuke",
+      "email": "juuanduuke@gmail.com"
     }
+  ],
+  "require": {
+    "illuminate/database": "^5.3",
+    "filp/whoops": "^2.1",
+    "league/plates": "^3.1",
+    "php": ">=5.6.4"
+  },
+  "autoload":{
+    "psr-4":{
+      "RDuuke\\Newbie\\": "src/"
+    }
+  }
 }
