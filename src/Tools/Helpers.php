@@ -83,7 +83,6 @@ function getFlashMessage($name)
 
 /**
  * @param $name
- *
  * @param string $type
  */
 function printFlashMessage($name)
