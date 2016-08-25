@@ -6,7 +6,6 @@ use RDuuke\Newbie\Contracts\Controller;
 
 class BaseController implements Controller
 {
-
     public function Index()
     {
         $title = 'Newbie Framework';

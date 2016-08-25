@@ -5,7 +5,6 @@ namespace RDuuke\Newbie\Controllers;
 use RDuuke\Newbie\Contracts\Controller;
 use RDuuke\Newbie\Models\Users;
 
-
 class UsersController implements Controller
 {
     protected $users;
@@ -54,7 +53,6 @@ class UsersController implements Controller
     {
         return view('users/create');
     }
-
 
     /**
      * Store method receives POST parameters.

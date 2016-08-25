@@ -9,10 +9,8 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule();
 $capsule->addConnection($dataDB);
-
 $capsule->bootEloquent();
 
 $whoops = new \Whoops\Run();
 $whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
-
 $whoops->register();

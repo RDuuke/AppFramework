@@ -2,7 +2,6 @@
 
 namespace RDuuke\Newbie\Core;
 
-
 class Request
 {
     private $controller;

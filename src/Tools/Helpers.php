@@ -61,7 +61,6 @@ function route($route, $title, $id = null, $attributes = null)
 
 /**
  * @param $name
- *
  * @param $message
  */
 function newFlashMessage($name, $message, $type = 'news')
@@ -71,7 +70,6 @@ function newFlashMessage($name, $message, $type = 'news')
 }
 /**
  * @param $name
- *
  * @return bool
  */
 function getFlashMessage($name)
@@ -95,4 +93,3 @@ function printFlashMessage($name)
     unset($_SESSION[$name]);
     unset($_SESSION['type']);
 }
-

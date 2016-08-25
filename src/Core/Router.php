@@ -2,10 +2,8 @@
 
 namespace RDuuke\Newbie\Core;
 
-
 class Router
 {
-
     public static function Run(Request $request)
     {
         $controller = $request->getController().'Controller';
