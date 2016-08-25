@@ -70,6 +70,7 @@ function newFlashMessage($name, $message, $type = 'news')
 }
 /**
  * @param $name
+ *
  * @return bool
  */
 function getFlashMessage($name)
@@ -83,7 +84,6 @@ function getFlashMessage($name)
 
 /**
  * @param $name
- *
  * @param string $type
  */
 function printFlashMessage($name)
