@@ -1,9 +1,9 @@
 <?php
 
-namespace RDuuke\Newbie\app\Controllers;
+namespace RDuuke\Newbie\Controllers;
 
-use RDuuke\Newbie\App\Controllers\Controller;
-use RDuuke\Newbie\App\Models\Users;
+use RDuuke\Newbie\Contracts\Controller;
+use RDuuke\Newbie\Models\Users;
 
 
 class UsersController implements Controller

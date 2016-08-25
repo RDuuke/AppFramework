@@ -1,6 +1,6 @@
 <?php
 
-namespace RDuuke\Newbie\App\Contracts;
+namespace RDuuke\Newbie\Contracts;
 
 
 interface Controller

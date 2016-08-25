@@ -1,8 +1,7 @@
 <?php
 
-namespace RDuuke\Newbie\App\Controllers;
-use RDuuke\Newbie\App\Models\Users;
-use RDuuke\Newbie\App\Contracts\Controller;
+namespace RDuuke\Newbie\Controllers;
+use RDuuke\Newbie\Contracts\Controller;
 
 class BaseController implements Controller
 {

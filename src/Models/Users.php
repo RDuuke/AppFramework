@@ -1,6 +1,6 @@
 <?php
 
-namespace RDuuke\Newbie\App\Models;
+namespace RDuuke\Newbie\Models;
 
 use Illuminate\Database\Eloquent\Model;
 class Users extends Model

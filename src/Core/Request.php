@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+namespace RDuuke\Newbie\Core;
 
 
 class Request
