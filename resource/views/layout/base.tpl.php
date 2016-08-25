@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <?php $title = isset($title) ? $title : "Framewok Newbie"; ?>
+    <?php $title = isset($title) ? $title : 'Framewok Newbie'; ?>
     <title><?php echo $title; ?></title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?php style('css/template.css'); ?>

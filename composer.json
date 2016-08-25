@@ -2,7 +2,7 @@
   "name": "rduuke/newbie",
   "description": "Micro-Framework Web of PHP",
   "homepage": "https://github.com/RDuuke/Newbie",
-  "keywords": ["PHP", "framework", "web"],
+  "keywords": ["framework", "newbie"],
   "type": "project",
   "license": "MIT",
   "authors": [
@@ -15,7 +15,7 @@
     "illuminate/database": "^5.3",
     "filp/whoops": "^2.1",
     "league/plates": "^3.1",
-    "php": ">=5.6.4"
+    "php": ">=5.5.9"
   },
   "autoload":{
     "psr-4":{
