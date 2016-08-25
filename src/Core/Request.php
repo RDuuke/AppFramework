@@ -21,11 +21,11 @@ class Request
                 $this->controller = ucfirst(strtolower(array_shift($route)));
             }
             $this->method = ucfirst(strtolower(array_shift($route)));
-            if(! $this->method){
+            if (!$this->method) {
                 $this->method = 'Index';
             }
             $this->parameters = $route;
-        }else{
+        } else {
             $this->controller = 'Base';
             $this->method = 'Index';
         }
@@ -45,5 +45,4 @@ class Request
     {
         return $this->parameters;
     }
-
 }

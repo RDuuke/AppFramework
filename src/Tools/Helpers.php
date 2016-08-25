@@ -17,7 +17,7 @@ function view($template, $parameters = [])
  */
 function redirect($route)
 {
-    $route = BASE_PUBLIC.'/'. $route;
+    $route = BASE_PUBLIC.'/'.$route;
     header('Location: '.$route);
 }
 
@@ -45,14 +45,12 @@ function script($route)
  */
 function route($route, $title, $id = null, $attributes = null)
 {
-    if (!$id == null)
-    {
-        $tpl = "<a href='". BASE_PUBLIC."/".$route.$id."'";
+    if (!$id == null) {
+        $tpl = "<a href='".BASE_PUBLIC.'/'.$route.$id."'";
     } else {
         $tpl = "<a href='".BASE_PUBLIC.'/'.$route."'";
     }
-    if (is_array($attributes))
-    {
+    if (is_array($attributes)) {
         foreach ($attributes as $clave => $valor) {
             $tpl .= $clave."= '".$valor."'";
         }
@@ -69,7 +67,7 @@ function route($route, $title, $id = null, $attributes = null)
 function newFlashMessage($name, $message, $type = 'news')
 {
     $_SESSION[$name] = $message;
-    $_SESSION['type']= $type;
+    $_SESSION['type'] = $type;
 }
 /**
  * @param $name

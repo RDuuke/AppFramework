@@ -47,7 +47,7 @@ class UsersController implements Controller
      */
     public function show($id)
     {
-        echo "Show: ".$id;
+        echo 'Show: '.$id;
     }
 
     public function create()
@@ -69,13 +69,13 @@ class UsersController implements Controller
 
     /**
      * Update method, receives numeric parameter.
-     * and receives POST parameters
+     * and receives POST parameters.
      *
      * @param $id
      */
     public function update($id)
     {
-        $request = (object)$_POST;
+        $request = (object) $_POST;
         $user = Users::find($id);
         $user->email = $request->email;
         $user->name = $request->name;
@@ -97,5 +97,4 @@ class UsersController implements Controller
 
         return redirect('users/');
     }
-
 }
