@@ -79,11 +79,13 @@ function getFlashMessage($name)
     if (!isset($_SESSION[$name])) {
         return false;
     }
+
     return true;
 }
 
 /**
  * @param $name
+ *
  * @param string $type
  */
 function printFlashMessage($name)

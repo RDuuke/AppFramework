@@ -82,7 +82,6 @@ class UsersController implements Controller
         $user->save();
 
         return redirect('users/');
-
     }
 
     /**

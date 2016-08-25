@@ -20,7 +20,7 @@ class Router
         if (is_readable($route)) {
             require_once $route;
 
-            $function  = 'RDuuke\\Newbie\\Controllers\\'.$controller;
+            $function = 'RDuuke\\Newbie\\Controllers\\'.$controller;
             $controller = new $function();
 
             if (!isset($parameters)) {
