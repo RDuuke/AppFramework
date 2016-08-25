@@ -3,7 +3,7 @@
   "description": "Micro-Framework Web of PHP",
   "homepage": "https://github.com/RDuuke/Newbie",
   "keywords": ["PHP", "framework", "web"],
-  "type": ":project",
+  "type": "project",
   "license": "MIT",
   "authors": [
     {
