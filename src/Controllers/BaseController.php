@@ -2,7 +2,7 @@
 
 namespace RDuuke\Newbie\Controllers;
 
-use RDuuke\Newbie\Contracts\Controller;
+use RDuuke\Newbie\Contracts\Controller\Controller;
 
 class BaseController implements Controller
 {

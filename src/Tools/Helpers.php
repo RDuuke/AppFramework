@@ -103,7 +103,7 @@ function printFlashMessage($name)
  *
  * @return array
  */
-function array_add($data, $key, $value)
+function arrayAdd($data, $key, $value)
 {
     if (is_array($data)) {
         $data[$key] = $value;
@@ -120,7 +120,7 @@ function array_add($data, $key, $value)
  *
  * @return mixed
  */
-function array_first($data = [])
+function arrayFirst($data = [])
 {
     if (is_array($data)) {
         $value = array_shift($data);
@@ -137,7 +137,7 @@ function array_first($data = [])
  *
  * @return mixed
  */
-function array_last($data = [])
+function arrayLast($data = [])
 {
     if (is_array($data)) {
         $value = array_pop($data);
@@ -154,7 +154,7 @@ function array_last($data = [])
  *
  * @return string
  */
-function array_json($array = [])
+function arrayJson($array = [])
 {
     if (is_array($array)) {
         return json_encode($array);
@@ -167,7 +167,7 @@ function array_json($array = [])
  *
  * @return mixed
  */
-function json_array($json)
+function jsonObject($json)
 {
     return json_decode($json);
 }
@@ -177,7 +177,7 @@ function json_array($json)
  *
  * @return mixed
  */
-function json_object($json)
+function jsonArray($json)
 {
     return json_decode($json, JSON_FORCE_OBJECT);
 }
@@ -190,12 +190,16 @@ function json_object($json)
  *
  * @return string
  */
-function str_limit($value, $limit)
+function strLimit($value, $limit)
 {
     if (is_numeric($limit)) {
-        $string = substr($value, 0, $limit).'...';
+        if (is_string($value)) {
 
-        return $string;
+            $string = substr($value, 0, $limit).'...';
+
+            return $string;
+        }
+        throw new \Exception('The value must be a string value');
     }
     throw new \Exception('The limit must be a numeric value');
 }
@@ -207,7 +211,7 @@ function str_limit($value, $limit)
  *
  * @return string
  */
-function str_random($limit = 10)
+function strRandom($limit = 10)
 {
     if (is_numeric($limit)) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -222,30 +226,3 @@ function str_random($limit = 10)
     throw new \Exception('The limit must be a numeric value');
 }
 
-
-/**
- * @param $value
- *
- * @return bool|string
- */
-function encrypt($value)
-{
-    $string = password_hash($value, PASSWORD_BCRYPT, ['cost' => 12]);
-
-    return $string;
-}
-
-/**
- * @param $hash
- * @param $value
- *
- * @return bool
- */
-function check_encryp($hash, $value)
-{
-    if (password_verify($hash, $value)) {
-        return true;
-    }
-
-    return false;
-}

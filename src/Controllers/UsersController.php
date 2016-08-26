@@ -2,7 +2,7 @@
 
 namespace RDuuke\Newbie\Controllers;
 
-use RDuuke\Newbie\Contracts\Controller;
+use RDuuke\Newbie\Contracts\Controller\Controller;
 use RDuuke\Newbie\Models\Users;
 
 class UsersController implements Controller
