@@ -224,4 +224,3 @@ function strRandom($limit = 10)
     }
     throw new \Exception('The limit must be a numeric value');
 }
-
