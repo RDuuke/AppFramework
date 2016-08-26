@@ -1,0 +1,13 @@
+<?php
+
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\StreamInterface;
+
+$app = new Slim\App();
+
+$app->get('/users', 'RDuuke\Newbie\Controllers\UsersController:index');
+$app->post('/users', 'RDuuke\Newbie\Controllers\UsersController:store');
+$app->get('/users/{id}', 'RDuuke\Newbie\Controllers\UsersController:show');
+$app->put('/users/{id}', 'RDuuke\Newbie\Controllers\UsersController:update');
+$app->delete('/users/{id}', 'RDuuke\Newbie\Controllers\UsersController:destroy');
