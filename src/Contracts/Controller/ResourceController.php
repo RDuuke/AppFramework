@@ -2,13 +2,9 @@
 
 namespace RDuuke\Newbie\Contracts\Controller;
 
-
 /**
  * Interface ResourceController.
- *
- * @package RDuuke\Newbie\Contracts\Controller
  */
-
 interface ResourceController
 {
     public function Index();
@@ -22,5 +18,4 @@ interface ResourceController
     public function Store();
 
     public function Destroy($id);
-
 }

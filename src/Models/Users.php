@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Users.
- * @package RDuuke\Newbie\Models
  */
 class Users extends Model
 {
