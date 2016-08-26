@@ -194,7 +194,6 @@ function strLimit($value, $limit)
 {
     if (is_numeric($limit)) {
         if (is_string($value)) {
-
             $string = substr($value, 0, $limit).'...';
 
             return $string;
@@ -225,4 +224,3 @@ function strRandom($limit = 10)
     }
     throw new \Exception('The limit must be a numeric value');
 }
-
