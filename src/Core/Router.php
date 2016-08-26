@@ -2,8 +2,15 @@
 
 namespace RDuuke\Newbie\Core;
 
+/**
+ * Class Router.
+ * @package RDuuke\Newbie\Core
+ */
 class Router
 {
+    /**
+     * @param Request $request
+     */
     public static function Run(Request $request)
     {
         $controller = $request->getController().'Controller';

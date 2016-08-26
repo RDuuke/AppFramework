@@ -93,3 +93,140 @@ function printFlashMessage($name)
     unset($_SESSION[$name]);
     unset($_SESSION['type']);
 }
+
+/**
+ * @param array $data
+ * @param $key
+ * @param $value
+ * @return array
+ * @throws Exception
+ */
+function array_add($data=[], $key, $value)
+{
+    if (is_array($data)){
+        $data[$key] = $value;
+
+        return $data;
+    }
+    throw new \Exception('It was expected an array');
+}
+
+/**
+ * @param array $data
+ * @return mixed
+ * @throws Exception
+ */
+function array_first($data=[])
+{
+    if (is_array($data)){
+        $value = array_shift($data);
+
+        return $value;
+    }
+    throw new \Exception('The value transform is not an array');
+}
+
+/**
+ * @param array $data
+ * @return mixed
+ * @throws Exception
+ */
+function array_last($data=[])
+{
+    if (is_array($data)){
+        $value = array_pop($data);
+
+        return $value;
+    }
+    throw new \Exception('The value transform is not an array');
+}
+
+/**
+ * @param array $array
+ * @return string
+ * @throws Exception
+ */
+function array_json($array=[])
+{
+    if (is_array($array)){
+        return json_encode($array);
+    }
+    throw new \Exception('The value transform is not an array');
+}
+
+/**
+ * @param $json
+ * @return mixed
+ */
+function json_array($json)
+{
+    return json_decode($json);
+}
+
+/**
+ * @param $json
+ * @return mixed
+ */
+function json_object($json)
+{
+    return json_decode($json,JSON_FORCE_OBJECT);
+}
+
+/**
+ * @param $value
+ * @param $limit
+ * @return string
+ * @throws Exception
+ */
+function str_limit($value, $limit)
+{
+    if (is_numeric($limit)) {
+        $string = substr($value, 0, $limit) . '...';
+        return $string;
+    }
+    throw new \Exception('The limit must be a numeric value');
+
+}
+
+/**
+ * @param int $limit
+ * @return string
+ * @throws Exception
+ */
+function str_random($limit = 10){
+
+    if (is_numeric($limit)){
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $limit; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+    throw new \Exception('The limit must be a numeric value');
+}
+
+
+/**
+ * @param $value
+ * @return bool|string
+ */
+function encrypt($value){
+
+    $string = password_hash($value, PASSWORD_BCRYPT, ['cost' => 12]);
+
+    return $string;
+}
+
+/**
+ * @param $hash
+ * @param $value
+ * @return bool
+ */
+function check_encryp($hash, $value){
+    if (password_verify($hash, $value)){
+        return true;
+    }
+    return false;
+}

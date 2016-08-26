@@ -2,12 +2,28 @@
 
 namespace RDuuke\Newbie\Core;
 
+/**
+ * Class Request
+ * @package RDuuke\Newbie\Core
+ */
 class Request
 {
+    /**
+     * @var string
+     */
     private $controller;
+    /**
+     * @var string
+     */
     private $method;
+    /**
+     * @var array
+     */
     private $parameters;
 
+    /**
+     * Request constructor.
+     */
     public function __construct()
     {
         if (isset($_GET['route'])) {
@@ -30,16 +46,25 @@ class Request
         }
     }
 
+    /**
+     * @return string
+     */
     public function getController()
     {
         return $this->controller;
     }
 
+    /**
+     * @return string
+     */
     public function getMethod()
     {
         return $this->method;
     }
 
+    /**
+     * @return array
+     */
     public function getParameters()
     {
         return $this->parameters;
