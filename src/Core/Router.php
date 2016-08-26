@@ -4,7 +4,6 @@ namespace RDuuke\Newbie\Core;
 
 /**
  * Class Router.
- * @package RDuuke\Newbie\Core
  */
 class Router
 {

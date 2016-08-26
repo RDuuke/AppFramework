@@ -98,12 +98,14 @@ function printFlashMessage($name)
  * @param array $data
  * @param $key
  * @param $value
- * @return array
+ *
  * @throws Exception
+ *
+ * @return array
  */
-function array_add($data=[], $key, $value)
+function array_add($data, $key, $value)
 {
-    if (is_array($data)){
+    if (is_array($data)) {
         $data[$key] = $value;
 
         return $data;
@@ -113,12 +115,14 @@ function array_add($data=[], $key, $value)
 
 /**
  * @param array $data
- * @return mixed
+ *
  * @throws Exception
+ *
+ * @return mixed
  */
-function array_first($data=[])
+function array_first($data = [])
 {
-    if (is_array($data)){
+    if (is_array($data)) {
         $value = array_shift($data);
 
         return $value;
@@ -128,12 +132,14 @@ function array_first($data=[])
 
 /**
  * @param array $data
- * @return mixed
+ *
  * @throws Exception
+ *
+ * @return mixed
  */
-function array_last($data=[])
+function array_last($data = [])
 {
-    if (is_array($data)){
+    if (is_array($data)) {
         $value = array_pop($data);
 
         return $value;
@@ -143,12 +149,14 @@ function array_last($data=[])
 
 /**
  * @param array $array
- * @return string
+ *
  * @throws Exception
+ *
+ * @return string
  */
-function array_json($array=[])
+function array_json($array = [])
 {
-    if (is_array($array)){
+    if (is_array($array)) {
         return json_encode($array);
     }
     throw new \Exception('The value transform is not an array');
@@ -156,6 +164,7 @@ function array_json($array=[])
 
 /**
  * @param $json
+ *
  * @return mixed
  */
 function json_array($json)
@@ -165,43 +174,49 @@ function json_array($json)
 
 /**
  * @param $json
+ *
  * @return mixed
  */
 function json_object($json)
 {
-    return json_decode($json,JSON_FORCE_OBJECT);
+    return json_decode($json, JSON_FORCE_OBJECT);
 }
 
 /**
  * @param $value
  * @param $limit
- * @return string
+ *
  * @throws Exception
+ *
+ * @return string
  */
 function str_limit($value, $limit)
 {
     if (is_numeric($limit)) {
-        $string = substr($value, 0, $limit) . '...';
+        $string = substr($value, 0, $limit).'...';
+
         return $string;
     }
     throw new \Exception('The limit must be a numeric value');
-
 }
 
 /**
  * @param int $limit
- * @return string
+ *
  * @throws Exception
+ *
+ * @return string
  */
-function str_random($limit = 10){
-
-    if (is_numeric($limit)){
+function str_random($limit = 10)
+{
+    if (is_numeric($limit)) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
         for ($i = 0; $i < $limit; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
+
         return $randomString;
     }
     throw new \Exception('The limit must be a numeric value');
@@ -210,10 +225,11 @@ function str_random($limit = 10){
 
 /**
  * @param $value
+ *
  * @return bool|string
  */
-function encrypt($value){
-
+function encrypt($value)
+{
     $string = password_hash($value, PASSWORD_BCRYPT, ['cost' => 12]);
 
     return $string;
@@ -222,11 +238,14 @@ function encrypt($value){
 /**
  * @param $hash
  * @param $value
+ *
  * @return bool
  */
-function check_encryp($hash, $value){
-    if (password_verify($hash, $value)){
+function check_encryp($hash, $value)
+{
+    if (password_verify($hash, $value)) {
         return true;
     }
+
     return false;
 }

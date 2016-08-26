@@ -3,8 +3,7 @@
 namespace RDuuke\Newbie\Core;
 
 /**
- * Class Request
- * @package RDuuke\Newbie\Core
+ * Class Request.
  */
 class Request
 {
