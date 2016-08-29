@@ -4,7 +4,7 @@
 $app = new Slim\App();
 
 
-$app->group('/users', function() use ($app) {
+$app->group('/users', function () use ($app) {
     $controller = new RDuuke\Newbie\Controllers\UsersController($app);
     $app->get('', $controller('index'));
     $app->get('/create', $controller('create'));
