@@ -19,8 +19,8 @@
             <td><?= $this->e($user->id) ?></td>
             <td><?= $user->email ?></td>
             <td><?= $user->name ?></td>
-            <td><?= route('users/edit/', 'Edit', $user->id, ['class' => 'btn']) ?> -
-                <?= route('users/destroy/', 'Delete', $user->id, ['class' => 'btn red']) ?>
+            <td><?= route('users/', 'Edit', $user->id, ['class' => 'btn']) ?> -
+                <?= route('users/', 'Delete', $user->id, ['class' => 'btn red']) ?>
             </td>
         </tr>
     <?php endforeach ?>
