@@ -2,7 +2,6 @@
 
 namespace RDuuke\Newbie\Controllers;
 
-
 class BaseController
 {
     public function Index()
