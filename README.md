@@ -19,7 +19,7 @@ define('BASE_PUBLIC', 'http://example.com/newbie/public');
 ```
 #### Directory Structure:
 ```
-Root Director/
+/
 ├── bootstrap
 ├── config
 ├── public
