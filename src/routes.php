@@ -1,17 +1,20 @@
 <?php
-
-
-$app = new Slim\App();
-
+$configuration = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
+$c = new \Slim\Container($configuration);
+$app = new \Slim\App($c);
 
 $app->group('/users', function () use ($app) {
     $controller = new RDuuke\Newbie\Controllers\UsersController($app);
-    $app->get('', $controller('index'));
-    $app->get('/create', $controller('create'));
-    $app->post('', $controller('store'));
-    $app->get('/{id:[0-9]+}', $controller('show'));
-    $app->get('/{id:[0-9]+}/edit', $controller('edit'));
-    $app->put('/{id:[0-9]+}', $controller('update'));
-    $app->delete('/{id:[0-9]+}', $controller('destroy'));
+    $this->get('', $controller('index'));
+    $this->get('/create', $controller('create'));
+    $this->post('', $controller('store'));
+    $this->get('/{id:[0-9]+}', $controller('show'));
+    $this->get('/{id:[0-9]+}/edit', $controller('edit'));
+    $this->put('/{id:[0-9]+}', $controller('update'));
+    $this->delete('/{id:[0-9]+}', $controller('destroy'));
 });
-$app->get('/', 'RDuuke\Newbie\Controllers\BaseController:index');
+$app->get('/', 'RDuuke\Newbie\Controllers\BaseController:Index');

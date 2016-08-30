@@ -11,8 +11,6 @@ $dataDB = [
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
 ];
-/* TimeZone*/
-$timezone = new \DateTime('America/Bogota');
 
 /* Configuration URL*/
 define('BASE_URL', 'http://localhost:8080/newbie');

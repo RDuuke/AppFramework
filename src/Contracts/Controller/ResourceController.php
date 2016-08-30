@@ -9,7 +9,7 @@ interface ResourceController
 {
     public function Index();
 
-    public function Show();
+    public function Show($id);
 
     public function Edit($id);
 

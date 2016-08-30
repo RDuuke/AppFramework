@@ -2,9 +2,8 @@
 
 namespace RDuuke\Newbie\Controllers;
 
-use RDuuke\Newbie\Contracts\Controller\Controller;
 
-class BaseController implements Controller
+class BaseController
 {
     public function Index()
     {

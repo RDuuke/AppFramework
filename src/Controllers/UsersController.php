@@ -2,13 +2,13 @@
 
 namespace RDuuke\Newbie\Controllers;
 
-use MartynBiz\Slim3Controller\Controller as Controller;
-use RDuuke\Newbie\Contracts\Controller\Controller as InterfaceController;
+use MartynBiz\Slim3Controller\Controller;
+
+use RDuuke\Newbie\Contracts\Controller\ResourceController;
 use RDuuke\Newbie\Models\Users;
 
-class UsersController extends Controller implements InterfaceController
+class UsersController extends Controller implements ResourceController
 {
-    protected $users;
 
     /**
      * Method index receives GET request extends the interface controller.
@@ -28,7 +28,6 @@ class UsersController extends Controller implements InterfaceController
      */
     public function edit($id)
     {
-        print_r($this->request);
         $user = Users::find($id);
 
         return view('users/edit', compact('user'));

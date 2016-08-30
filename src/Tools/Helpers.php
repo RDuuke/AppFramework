@@ -190,7 +190,7 @@ function jsonArray($json)
  *
  * @return string
  */
-function strLimit($value, $limit)
+function strLimit($value, $limit = 10)
 {
     if (is_numeric($limit)) {
         if (is_string($value)) {
