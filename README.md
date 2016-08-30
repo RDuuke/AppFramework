@@ -235,7 +235,7 @@ Receives as a parameter the path where is the css `public/css/template.css` file
 ```html
     <head>
          <?php style('css/template.css'); ?>
-         <!-- public/css/template.css -->
+         <!-- <link rel="stylesheet" href="http://example.com/newbie/public/css/template.css"> -->
     </head>
 ```
 ##### script:
@@ -243,7 +243,7 @@ Receives as a parameter the path where is the js `public/js/template.js` file, o
 ```html
     <body>
          <?php script('css/template.js'); ?>
-         <!--  public/script/template.js -->
+         <!--  <script src="http://example.com/newbie/public/js/template.js"></script>-->
     </body>
 ```
 ##### route:
